@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aloqa - HALOVAT</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .page-header {
+            padding: 160px 0 80px;
+            background: var(--primary);
+            color: white;
+            text-align: center;
+        }
+        .page-header h1 { color: white; }
+        
+        .contact-card {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            margin-bottom: 25px;
+        }
+        .contact-icon {
+            width: 60px;
+            height: 60px;
+            background: rgba(0, 51, 102, 0.05);
+            color: var(--primary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+        }
+        
+        .map-container {
+            width: 100%;
+            height: 450px;
+            border-radius: var(--radius);
+            overflow: hidden;
+            box-shadow: var(--shadow-sm);
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="nav-brand">
+                <img src="assets/images/logo.png" alt="Halovat Logo" onerror="this.src='./assets/images/logo-placeholder.png'; this.alt='HALOVAT';">
+                HALOVAT
+            </a>
+            <button class="mobile-menu-btn">☰</button>
+            <div class="nav-links">
+                <a href="index.html">Asosiy</a>
+                <a href="about.html">Biz Haqimizda</a>
+                <a href="products.html">Mahsulotlar</a>
+                <a href="custom-order.html">Buyurtma</a>
+                <a href="bonuses.html">Bonuslar</a>
+                <a href="delivery.html">Yetkazib Berish</a>
+                <a href="warranty.html">Kafolat</a>
+                <a href="contact.html">Aloqa</a>
+            </div>
+        </div>
+    </nav>
+
+    <header class="page-header">
+        <div class="container fade-up">
+            <h1>Biz Bilan Aloqa</h1>
+            <p style="color: rgba(255,255,255,0.8); font-size: 1.2rem;">Savollaringiz bormi? Biz sizga yordam berishdan xursandmiz</p>
+        </div>
+    </header>
+
+    <section class="section-padding">
+        <div class="container grid-2">
+            <div class="fade-up">
+                <h2 style="font-size: 2rem; margin-bottom: 40px;">Bog'lanish ma'lumotlari</h2>
+                
+                <div class="contact-card">
+                    <div class="contact-icon">📞</div>
+                    <div>
+                        <h4 style="margin: 0;">Telefon raqamlarimiz</h4>
+                        <p style="margin: 0;">+998 95 987 77 11 <br> +998 93 000 10 37</p>
+                    </div>
+                </div>
+                
+                <div class="contact-card">
+                    <div class="contact-icon">📍</div>
+                    <div>
+                        <h4 style="margin: 0;">Manzilimiz</h4>
+                        <p style="margin: 0;">Toshkent viloyati, O‘rta Chirchiq tumani, Qorasuv mebellar shaharchasi</p>
+                    </div>
+                </div>
+                
+                <div class="contact-card">
+                    <div class="contact-icon">📱</div>
+                    <div>
+                        <h4 style="margin: 0;">Ijtimoiy Tarmoqlar</h4>
+                        <p style="margin: 0;">
+                            <a href="https://instagram.com/halovat_matras" target="_blank" style="color: var(--primary); font-weight: 500;">Instagram</a> | 
+                            <a href="https://t.me/Halovat_Matras" target="_blank" style="color: var(--primary); font-weight: 500;">Telegram</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="fade-up card" style="transition-delay: 0.2s;">
+                <h3 style="margin-bottom: 20px;">Savol yuborish</h3>
+                <form action="#" method="POST">
+                    <div style="margin-bottom: 20px;">
+                        <label style="display: block; margin-bottom: 5px;">Ismingiz</label>
+                        <input type="text" style="width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 8px;" required>
+                    </div>
+                    <div style="margin-bottom: 20px;">
+                        <label style="display: block; margin-bottom: 5px;">Raqamingiz</label>
+                        <input type="tel" style="width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 8px;" required>
+                    </div>
+                    <div style="margin-bottom: 20px;">
+                        <label style="display: block; margin-bottom: 5px;">Xabar matni</label>
+                        <textarea rows="4" style="width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 8px; resize: none;" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary" style="width: 100%;">Yuborish</button>
+                </form>
+            </div>
+        </div>
+
+        <div class="container fade-up" style="margin-top: 60px;">
+            <div class="map-container">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15024.316887557116!2d69.34444906599723!3d41.13969190520286!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38ae8beebc656095%3A0x6a0aef865e94b7e8!2sQorasuv%2C%20Uzbekistan!5e0!3m2!1sen!2s!4v1700000000000!5m2!1sen!2s" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer ... -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4 style="font-size: 1.5rem; display: flex; align-items: center; gap: 10px;">
+                        <img src="assets/images/logo.png" alt="logo" style="height: 30px; filter: brightness(0) invert(1);" onerror="this.style.display='none'"> 
+                        HALOVAT
+                    </h4>
+                    <p>Baxtli hayot sari qulay uyqu. Premium matraslar ishlab chiqaruvchisi.</p>
+                    <div class="social-links">
+                        <a href="https://instagram.com/halovat_matras" target="_blank">Ig</a>
+                        <a href="https://t.me/Halovat_Matras" target="_blank">Tg</a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Sahifalar</h4>
+                    <ul>
+                        <li><a href="index.html">Asosiy sahifa</a></li>
+                        <li><a href="about.html">Biz haqimizda</a></li>
+                        <li><a href="products.html">Mahsulotlar</a></li>
+                        <li><a href="custom-order.html">Buyurtma</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Mijozlar uchun</h4>
+                    <ul>
+                        <li><a href="delivery.html">Yetkazib berish</a></li>
+                        <li><a href="warranty.html">Kafolat xizmati</a></li>
+                        <li><a href="bonuses.html">Bonuslar va aksiyalar</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Aloqa</h4>
+                    <ul>
+                        <li><p>+998 95 987 77 11</p></li>
+                        <li><p>+998 93 000 10 37</p></li>
+                        <li><p>Toshkent viloyati, O‘rta Chirchiq tumani, Qorasuv mebellar shaharchasi</p></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                &copy; 2026 Halovat. Barcha huquqlar himoyalangan.
+            </div>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>

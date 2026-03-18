@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maxsus Buyurtma - HALOVAT</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .page-header {
+            padding: 160px 0 80px;
+            background: var(--primary);
+            color: white;
+            text-align: center;
+        }
+        .page-header h1 { color: white; }
+        
+        .order-form-container {
+            max-width: 800px;
+            margin: -40px auto 0;
+            position: relative;
+            z-index: 10;
+        }
+        
+        .form-group {
+            margin-bottom: 24px;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 500;
+            color: var(--text-main);
+        }
+        
+        .form-control {
+            width: 100%;
+            padding: 14px 20px;
+            border: 2px solid #e2e8f0;
+            border-radius: 12px;
+            font-family: inherit;
+            font-size: 1rem;
+            transition: var(--transition);
+        }
+        
+        .form-control:focus {
+            outline: none;
+            border-color: var(--primary);
+            box-shadow: 0 0 0 3px rgba(0, 51, 102, 0.1);
+        }
+        
+        .info-alert {
+            background: #eef2ff;
+            color: var(--primary);
+            padding: 20px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 30px;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="nav-brand">
+                <img src="assets/images/logo.png" alt="Halovat Logo" onerror="this.src='./assets/images/logo-placeholder.png'; this.alt='HALOVAT';">
+                HALOVAT
+            </a>
+            <button class="mobile-menu-btn">☰</button>
+            <div class="nav-links">
+                <a href="index.html">Asosiy</a>
+                <a href="about.html">Biz Haqimizda</a>
+                <a href="products.html">Mahsulotlar</a>
+                <a href="custom-order.html">Buyurtma</a>
+                <a href="bonuses.html">Bonuslar</a>
+                <a href="delivery.html">Yetkazib Berish</a>
+                <a href="warranty.html">Kafolat</a>
+                <a href="contact.html">Aloqa</a>
+            </div>
+        </div>
+    </nav>
+
+    <header class="page-header">
+        <div class="container fade-up">
+            <h1>O'z Matrasingizni Yrating</h1>
+            <p style="color: rgba(255,255,255,0.8); font-size: 1.2rem;">Istalgan o'lcham va rangdagi maxsus buyurtmalar</p>
+        </div>
+    </header>
+
+    <section class="section-padding" style="padding-top: 0;">
+        <div class="container relative">
+            <div class="card order-form-container fade-up" style="transition-delay: 0.2s;">
+                <div class="info-alert">
+                    <span style="font-size: 1.5rem;">⏱️</span>
+                    <div>
+                        <strong style="display: block; font-size: 1.1rem;">Tezkor Ishlab Chiqarish</strong>
+                        Sizning maxsus buyurtmangiz atigi 1-2 kun ichida tayyor bo'ladi. O'lchamiga qarab farqlanmaydi.
+                    </div>
+                </div>
+
+                <form action="#" method="POST">
+                    <div class="grid-2" style="gap: 24px;">
+                        <div class="form-group">
+                            <label for="name">Ismingiz</label>
+                            <input type="text" id="name" class="form-control" placeholder="Masalan: Azizbek" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Telefon raqamingiz</label>
+                            <input type="tel" id="phone" class="form-control" placeholder="+998" required>
+                        </div>
+                    </div>
+
+                    <div class="grid-2" style="gap: 24px;">
+                        <div class="form-group">
+                            <label for="model">Matras Turi</label>
+                            <select id="model" class="form-control" required>
+                                <option value="" disabled selected>Tanlang...</option>
+                                <option value="ortopedik">Ortopedik</option>
+                                <option value="anatomik">Anatomik</option>
+                                <option value="sintetik">Sintetik</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="color">Matras Rangi (qoplama)</label>
+                            <select id="color" class="form-control" required>
+                                <option value="" disabled selected>Tanlang...</option>
+                                <option value="white">Oq (Klassik)</option>
+                                <option value="grey">Och kulrang</option>
+                                <option value="blue">Och ko'k (Apple style)</option>
+                                <option value="custom">Boshqa eksklyuziv ranglar</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Kerakli O'lcham (sm) - Eni va Uzunligi</label>
+                        <div style="display: flex; gap: 15px;">
+                            <input type="number" class="form-control" placeholder="Eni (masalan: 160)" required>
+                            <span style="display: flex; align-items: center; font-weight: bold; color: var(--text-muted);">X</span>
+                            <input type="number" class="form-control" placeholder="Uzunligi (masalan: 200)" required>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">Qo'shimcha izoh yoki talablar</label>
+                        <textarea id="message" class="form-control" rows="4" placeholder="Agar alohida istaklaringiz bo'lsa yozib qoldiring..."></textarea>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary" style="width: 100%; font-size: 1.1rem; padding: 16px;">Buyurtmani Rasmiylashtirish</button>
+                    <p style="text-align: center; margin-top: 15px; font-size: 0.85rem;">Tugmani bosish orqali ma'lumotlaringiz maxfiyligiga rozi bo'lasiz</p>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <!-- ... footer content ... -->
+                <div class="footer-col">
+                    <h4 style="font-size: 1.5rem; display: flex; align-items: center; gap: 10px;">
+                        <img src="assets/images/logo.png" alt="logo" style="height: 30px; filter: brightness(0) invert(1);" onerror="this.style.display='none'"> 
+                        HALOVAT
+                    </h4>
+                    <p>Baxtli hayot sari qulay uyqu. Premium matraslar ishlab chiqaruvchisi.</p>
+                    <div class="social-links">
+                        <a href="https://instagram.com/halovat_matras" target="_blank">Ig</a>
+                        <a href="https://t.me/Halovat_Matras" target="_blank">Tg</a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Sahifalar</h4>
+                    <ul>
+                        <li><a href="index.html">Asosiy sahifa</a></li>
+                        <li><a href="about.html">Biz haqimizda</a></li>
+                        <li><a href="products.html">Mahsulotlar</a></li>
+                        <li><a href="custom-order.html">Buyurtma</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Mijozlar uchun</h4>
+                    <ul>
+                        <li><a href="delivery.html">Yetkazib berish</a></li>
+                        <li><a href="warranty.html">Kafolat xizmati</a></li>
+                        <li><a href="bonuses.html">Bonuslar va aksiyalar</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Aloqa</h4>
+                    <ul>
+                        <li><p>+998 95 987 77 11</p></li>
+                        <li><p>+998 93 000 10 37</p></li>
+                        <li><p>Toshkent viloyati, O‘rta Chirchiq tumani, Qorasuv mebellar shaharchasi</p></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                &copy; 2026 Halovat. Barcha huquqlar himoyalangan.
+            </div>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>

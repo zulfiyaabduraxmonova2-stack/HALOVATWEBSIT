@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yetkazib Berish - HALOVAT</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .page-header {
+            padding: 160px 0 80px;
+            background: var(--primary);
+            color: white;
+            text-align: center;
+        }
+        .page-header h1 { color: white; }
+        
+        .timeline {
+            position: relative;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px 0;
+        }
+        
+        .timeline::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 50%;
+            width: 4px;
+            height: 100%;
+            background: var(--primary);
+            border-radius: 4px;
+            transform: translateX(-50%);
+        }
+        
+        .timeline-item {
+            margin-bottom: 40px;
+            position: relative;
+            width: 50%;
+            padding: 0 40px;
+        }
+        
+        .timeline-item:nth-child(odd) {
+            left: 0;
+            text-align: right;
+        }
+        
+        .timeline-item:nth-child(even) {
+            left: 50%;
+        }
+        
+        .timeline-icon {
+            position: absolute;
+            top: 0;
+            width: 40px;
+            height: 40px;
+            background: var(--secondary);
+            border: 4px solid var(--primary);
+            border-radius: 50%;
+            z-index: 10;
+        }
+        
+        .timeline-item:nth-child(odd) .timeline-icon {
+            right: -20px;
+        }
+        
+        .timeline-item:nth-child(even) .timeline-icon {
+            left: -20px;
+        }
+        
+        .timeline-content {
+            background: var(--card-bg);
+            padding: 24px;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow-sm);
+        }
+        .timeline-content:hover {
+            box-shadow: var(--shadow-lg);
+        }
+        
+        @media (max-width: 768px) {
+            .timeline::before {
+                left: 20px;
+            }
+            .timeline-item {
+                width: 100%;
+                left: 0 !important;
+                text-align: left !important;
+                padding-left: 60px;
+            }
+            .timeline-item .timeline-icon {
+                left: 0 !important;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="nav-brand">
+                <img src="assets/images/logo.png" alt="Halovat Logo" onerror="this.src='./assets/images/logo-placeholder.png'; this.alt='HALOVAT';">
+                HALOVAT
+            </a>
+            <button class="mobile-menu-btn">☰</button>
+            <div class="nav-links">
+                <a href="index.html">Asosiy</a>
+                <a href="about.html">Biz Haqimizda</a>
+                <a href="products.html">Mahsulotlar</a>
+                <a href="custom-order.html">Buyurtma</a>
+                <a href="bonuses.html">Bonuslar</a>
+                <a href="delivery.html">Yetkazib Berish</a>
+                <a href="warranty.html">Kafolat</a>
+                <a href="contact.html">Aloqa</a>
+            </div>
+        </div>
+    </nav>
+
+    <header class="page-header">
+        <div class="container fade-up">
+            <h1>Yetkazib Berish Xizmati</h1>
+            <p style="color: rgba(255,255,255,0.8); font-size: 1.2rem;">O'zbekistonning barcha hududlariga tezkor yetkazib beramiz</p>
+        </div>
+    </header>
+
+    <section class="section-padding">
+        <div class="container">
+            <div class="text-center fade-up" style="margin-bottom: 60px;">
+                <h2 style="font-size: 2rem;">Qanday ishlaydi?</h2>
+            </div>
+            
+            <div class="timeline fade-up">
+                <div class="timeline-item">
+                    <div class="timeline-icon"></div>
+                    <div class="timeline-content">
+                        <h3>1. Buyurtmani qabul qilish</h3>
+                        <p>Buyurtma qoldirganingizdan so'ng, menejerlarimiz siz bilan bog'lanib, o'lcham va qo'shimcha ma'lumotlarni tasdiqlashadi.</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-icon"></div>
+                    <div class="timeline-content">
+                        <h3>2. Ishlab chiqarish</h3>
+                        <p>Maxsus texnologiyalar yordamida buyurtmangiz 1-2 kun ichida tayyor holatga keltiriladi.</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-icon"></div>
+                    <div class="timeline-content">
+                        <h3>3. Yo'lga chiqish</h3>
+                        <p>Matras maxsus himoya qoplamasida xavfsiz transportirovka qilish uchun yuklanadi va sizning manzilingiz tamon yo'lga chiqadi.</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-icon"></div>
+                    <div class="timeline-content">
+                        <h3>4. Qabul qilib olish</h3>
+                        <p>Uyingizgacha xavfsiz va butun yetkaziladi. Mahsulotni ko'zdan kechirganingizdan so'ng hisob-kitobni amalga oshirasiz.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer ... -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4 style="font-size: 1.5rem; display: flex; align-items: center; gap: 10px;">
+                        <img src="assets/images/logo.png" alt="logo" style="height: 30px; filter: brightness(0) invert(1);" onerror="this.style.display='none'"> 
+                        HALOVAT
+                    </h4>
+                    <p>Baxtli hayot sari qulay uyqu. Premium matraslar ishlab chiqaruvchisi.</p>
+                    <div class="social-links">
+                        <a href="https://instagram.com/halovat_matras" target="_blank">Ig</a>
+                        <a href="https://t.me/Halovat_Matras" target="_blank">Tg</a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Sahifalar</h4>
+                    <ul>
+                        <li><a href="index.html">Asosiy sahifa</a></li>
+                        <li><a href="about.html">Biz haqimizda</a></li>
+                        <li><a href="products.html">Mahsulotlar</a></li>
+                        <li><a href="custom-order.html">Buyurtma</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Mijozlar uchun</h4>
+                    <ul>
+                        <li><a href="delivery.html">Yetkazib berish</a></li>
+                        <li><a href="warranty.html">Kafolat xizmati</a></li>
+                        <li><a href="bonuses.html">Bonuslar va aksiyalar</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Aloqa</h4>
+                    <ul>
+                        <li><p>+998 95 987 77 11</p></li>
+                        <li><p>+998 93 000 10 37</p></li>
+                        <li><p>Toshkent viloyati, O‘rta Chirchiq tumani, Qorasuv mebellar shaharchasi</p></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                &copy; 2026 Halovat. Barcha huquqlar himoyalangan.
+            </div>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>

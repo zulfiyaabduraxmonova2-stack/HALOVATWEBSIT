@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mahsulotlar - HALOVAT</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .page-header {
+            padding: 160px 0 80px;
+            background: var(--primary);
+            color: white;
+            text-align: center;
+        }
+        .page-header h1 { color: white; }
+        .product-card {
+            text-align: left;
+            position: relative;
+            overflow: hidden;
+        }
+        .product-card .price {
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: var(--primary);
+            margin: 15px 0;
+        }
+        .product-card ul {
+            margin-bottom: 25px;
+            color: var(--text-muted);
+            font-size: 0.95rem;
+        }
+        .product-card ul li {
+            margin-bottom: 8px;
+            padding-left: 20px;
+            position: relative;
+        }
+        .product-card ul li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: var(--primary);
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="nav-brand">
+                <img src="assets/images/logo.png" alt="Halovat Logo" onerror="this.src='./assets/images/logo-placeholder.png'; this.alt='HALOVAT';">
+                HALOVAT
+            </a>
+            <button class="mobile-menu-btn">☰</button>
+            <div class="nav-links">
+                <a href="index.html">Asosiy</a>
+                <a href="about.html">Biz Haqimizda</a>
+                <a href="products.html">Mahsulotlar</a>
+                <a href="custom-order.html">Buyurtma</a>
+                <a href="bonuses.html">Bonuslar</a>
+                <a href="delivery.html">Yetkazib Berish</a>
+                <a href="warranty.html">Kafolat</a>
+                <a href="contact.html">Aloqa</a>
+            </div>
+        </div>
+    </nav>
+
+    <header class="page-header">
+        <div class="container fade-up">
+            <h1>Bizning Mahsulotlar</h1>
+            <p style="color: rgba(255,255,255,0.8); font-size: 1.2rem;">Har qanday did va ehtiyoj uchun mukammal yechimlar</p>
+        </div>
+    </header>
+
+    <section class="section-padding">
+        <div class="container">
+            <div class="grid-3">
+                <!-- Product 1 -->
+                <div class="card product-card fade-up">
+                    <img src="assets/images/ortopedik.png" alt="Ortopedik Matras" class="card-img" onerror="this.src='assets/images/hero.png'">
+                    <h3>Ortopedik</h3>
+                    <div class="price">Premium Sifat</div>
+                    <ul>
+                        <li>Qattiq va mustahkam asos</li>
+                        <li>Umurtqa pog'onasi uchun ideal yordam</li>
+                        <li>Mustaqil prujinalar bloki</li>
+                        <li>Nafas oluvchi trikotaj qoplama</li>
+                    </ul>
+                    <div style="margin-top: auto;">
+                        <a href="custom-order.html" class="btn btn-primary" style="width: 100%;">Buyurtma berish</a>
+                    </div>
+                </div>
+
+                <!-- Product 2 -->
+                <div class="card product-card fade-up" style="transition-delay: 0.1s;">
+                    <img src="assets/images/hero.png" alt="Anatomik Matras" class="card-img">
+                    <h3>Anatomik</h3>
+                    <div class="price">Maksimal Qulaylik</div>
+                    <ul>
+                        <li>Tana shaklini takrorlovchi xususiyat</li>
+                        <li>Memory Foam (xotirali ko'pik) qatlami</li>
+                        <li>Bo'g'imlardagi bosimni kamaytiradi</li>
+                        <li>Antiallergik materiallar</li>
+                    </ul>
+                    <div style="margin-top: auto;">
+                        <a href="custom-order.html" class="btn btn-primary" style="width: 100%;">Buyurtma berish</a>
+                    </div>
+                </div>
+
+                <!-- Product 3 -->
+                <div class="card product-card fade-up" style="transition-delay: 0.2s;">
+                    <img src="assets/images/sintetik.png" alt="Sintetik Matras" class="card-img" onerror="this.src='assets/images/hero.png'">
+                    <h3>Sintetik</h3>
+                    <div class="price">Hamyonbop Yechim</div>
+                    <ul>
+                        <li>Sifatli sintapon va poliuretan</li>
+                        <li>Yengil o'lcham va qulay tashish</li>
+                        <li>Bolalar va yoshlar uchun mos</li>
+                        <li>Oson tozalanadigan sirt</li>
+                    </ul>
+                    <div style="margin-top: auto;">
+                        <a href="custom-order.html" class="btn btn-primary" style="width: 100%;">Buyurtma berish</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <!-- ... footer content ... -->
+                <div class="footer-col">
+                    <h4 style="font-size: 1.5rem; display: flex; align-items: center; gap: 10px;">
+                        <img src="assets/images/logo.png" alt="logo" style="height: 30px; filter: brightness(0) invert(1);" onerror="this.style.display='none'"> 
+                        HALOVAT
+                    </h4>
+                    <p>Baxtli hayot sari qulay uyqu. Premium matraslar ishlab chiqaruvchisi.</p>
+                    <div class="social-links">
+                        <a href="https://instagram.com/halovat_matras" target="_blank">Ig</a>
+                        <a href="https://t.me/Halovat_Matras" target="_blank">Tg</a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Sahifalar</h4>
+                    <ul>
+                        <li><a href="index.html">Asosiy sahifa</a></li>
+                        <li><a href="about.html">Biz haqimizda</a></li>
+                        <li><a href="products.html">Mahsulotlar</a></li>
+                        <li><a href="custom-order.html">Buyurtma</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Mijozlar uchun</h4>
+                    <ul>
+                        <li><a href="delivery.html">Yetkazib berish</a></li>
+                        <li><a href="warranty.html">Kafolat xizmati</a></li>
+                        <li><a href="bonuses.html">Bonuslar va aksiyalar</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Aloqa</h4>
+                    <ul>
+                        <li><p>+998 95 987 77 11</p></li>
+                        <li><p>+998 93 000 10 37</p></li>
+                        <li><p>Toshkent viloyati, O‘rta Chirchiq tumani, Qorasuv mebellar shaharchasi</p></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                &copy; 2026 Halovat. Barcha huquqlar himoyalangan.
+            </div>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
